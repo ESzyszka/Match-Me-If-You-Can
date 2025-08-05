@@ -22,15 +22,19 @@
         Match the disguises before the rumor boards. Line up 3+ DiCaprios or 3+ Detectives to score and trigger cascades.
       </p>
       <div class="airline-ticket">
+
         <!-- Left ticket stub -->
         <div class="ticket-stub">
+
           <div class="ticket-header">
             <span class="flight-label">FLIGHT</span>
             <span class="flight-number">ROUTER AIRWAYS RA31</span>
+
           </div>
           <div class="route-info">
             <span class="route-label">ROUTE</span>
             <span class="route">NYC TO GPT</span>
+
           </div>
           <div class="passenger-info">
             <span class="passenger-label">PASSENGER</span>
@@ -53,8 +57,10 @@
           </div>
           <div class="ticket-footer">
             <div class="tracking">2 025 365 3958 3309 0</div>
+
             <div class="barcode-section">
               <div class="barcode"></div>
+
               <div class="class">1ST CL</div>
             </div>
           </div>
@@ -62,12 +68,15 @@
         
         <!-- Perforated separation -->
         <div class="perforation"></div>
+
         
         <!-- Right ticket stub -->
         <div class="ticket-stub">
+
           <div class="ticket-header">
             <span class="flight-label">FLIGHT</span>
             <span class="flight-number">ROUTER AIRWAYS RA31</span>
+
           </div>
           <div class="passenger-info">
             <span class="passenger-label">PASSENGER</span>
@@ -87,12 +96,14 @@
             <div class="barcode-section">
               <div class="class">1ST CL</div>
               <div class="barcode"></div>
+
             </div>
           </div>
         </div>
         
         <!-- Router Airways branding strip -->
         <div class="airline-branding">
+
           <div class="brand-left">
             <span class="triangle">▲</span>
             <span class="airline-name">OPENROUTER AIRLINES</span>
@@ -103,30 +114,38 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="ticker" aria-live="polite">
-      <span>🚨 ALERT: Horizon Alpha spotted hallucinating again. GPT-5 is on the case.</span>
-      <span>🕶️ UNDERCOVER: GPT-5 infiltrates prompt chains to catch model misalignment</span>
-      <span>🧠 MODEL WAR: GPT-5 claims it doesn't chase — it converges.</span>
+
+      <!-- Move ticker BELOW the ticket -->
+      <div class="ticker" aria-live="polite">
+        <span>🚨 ALERT: Horizon Alpha spotted hallucinating again. GPT-5 is on the case.</span>
+        <span>🕶️ UNDERCOVER: GPT-5 infiltrates prompt chains to catch model misalignment</span>
+        <span>🧠 MODEL WAR: GPT-5 claims it doesn't chase — it converges.</span>
+      </div>
     </div>
   </header>
 
   <main>
     <section class="panel contrast">
       <div class="game-controls">
+
         <div class="difficulty-selector">
           <label>Difficulty:</label>
+
           <select id="difficultySelect">
+
             <option value="easy">Easy (6 pairs)</option>
             <option value="medium" selected>Medium (8 pairs)</option>
             <option value="hard">Hard (12 pairs)</option>
           </select>
         </div>
         <button id="startBtn" class="btn primary">Start Game</button>
+
         <button id="restartBtn" class="btn">Restart</button>
+
       </div>
       
       <div class="game-stats">
+
         <div class="stat">
           <span class="stat-label">Score:</span>
           <span id="score" class="stat-value">0</span>
@@ -146,10 +165,12 @@
       </div>
 
       <div id="gameBoard" class="game-board" aria-label="Memory matching game board">
+
         <!-- Tiles will be dynamically generated here -->
       </div>
       
       <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
     </section>
 
     <section class="panel">
