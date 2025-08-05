@@ -27,11 +27,7 @@ In this web game, you match fugitive decappers (Horizon models) with detective d
 
 ## 🚀 Context & Launch
 
-This parody project dropped in **August 2025**, coinciding with the (fictional) launch of **GPT-5** and the mythical early leaks of **Horizon Alpha** and **Beta**. No real models were harmed — but several were hilariously flagged.
+This parody project dropped in **August 2025**, coinciding with the anticipated launch of **GPT-5** and the mythical early leaks of **Horizon Alpha** and **Beta**. 
+No real models were harmed in the process
 
----
 
-## 🛠️ Tech Stack
-
-- HTML / CSS / JavaScript
-- [Insert framework if applicable: React, V]()
