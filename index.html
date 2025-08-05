@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Match Me If You Can — Memory Match</title>
+  <meta name="description" content="Drag and match tiles featuring DiCaprio and Detective characters from Match Me If You Can.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="scanline" aria-hidden="true"></div>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <h1 class="title">
+        Match Me If You Can
+        <span class="subtitle">Departures Board Edition — Horizon Beta to GPT‑5?</span>
+      </h1>
+      <p class="lede">
+        Match the disguises before the rumor boards. Line up 3+ DiCaprios or 3+ Detectives to score and trigger cascades.
+      </p>
+      <div class="airline-ticket">
+        <!-- Left ticket stub -->
+        <div class="ticket-stub">
+          <div class="ticket-header">
+            <span class="flight-label">FLIGHT</span>
+            <span class="flight-number">ROUTER AIRWAYS RA31</span>
+          </div>
+          <div class="route-info">
+            <span class="route-label">ROUTE</span>
+            <span class="route">NYC TO GPT</span>
+          </div>
+          <div class="passenger-info">
+            <span class="passenger-label">PASSENGER</span>
+            <div class="passenger-name">PLAYER / MATCH SEEKER</div>
+          </div>
+          <div class="flight-details">
+            <div class="gate-section">
+              <span class="label">GATE</span>
+              <div class="value">A42</div>
+            </div>
+            <div class="departure-section">
+              <span class="label">DEPARTURE</span>
+              <div class="value">NOW</div>
+              <div class="date">15 DEC 2025</div>
+            </div>
+            <div class="boarding-section">
+              <span class="label">BOARDING ZONE</span>
+              <div class="value">β5</div>
+            </div>
+          </div>
+          <div class="ticket-footer">
+            <div class="tracking">2 025 365 3958 3309 0</div>
+            <div class="barcode-section">
+              <div class="barcode"></div>
+              <div class="class">1ST CL</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Perforated separation -->
+        <div class="perforation"></div>
+        
+        <!-- Right ticket stub -->
+        <div class="ticket-stub">
+          <div class="ticket-header">
+            <span class="flight-label">FLIGHT</span>
+            <span class="flight-number">ROUTER AIRWAYS RA31</span>
+          </div>
+          <div class="passenger-info">
+            <span class="passenger-label">PASSENGER</span>
+            <div class="passenger-name">PLAYER / MATCH SEEKER</div>
+          </div>
+          <div class="flight-details-right">
+            <div class="seat-section">
+              <span class="label">SEAT</span>
+              <div class="value">24C</div>
+            </div>
+            <div class="departure-section">
+              <span class="label">DEPARTURE</span>
+              <div class="value">NOW</div>
+            </div>
+          </div>
+          <div class="ticket-footer">
+            <div class="barcode-section">
+              <div class="class">1ST CL</div>
+              <div class="barcode"></div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Router Airways branding strip -->
+        <div class="airline-branding">
+          <div class="brand-left">
+            <span class="triangle">▲</span>
+            <span class="airline-name">OPENROUTER AIRLINES</span>
+          </div>
+          <div class="brand-right">
+            <span class="triangle">▲</span>
+            <span class="airline-name">OPENROUTER AIRLINES</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ticker" aria-live="polite">
+      <span>🚨 ALERT: Horizon Alpha spotted hallucinating again. GPT-5 is on the case.</span>
+      <span>🕶️ UNDERCOVER: GPT-5 infiltrates prompt chains to catch model misalignment</span>
+      <span>🧠 MODEL WAR: GPT-5 claims it doesn't chase — it converges.</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel contrast">
+      <div class="game-controls">
+        <div class="difficulty-selector">
+          <label>Difficulty:</label>
+          <select id="difficultySelect">
+            <option value="easy">Easy (6 pairs)</option>
+            <option value="medium" selected>Medium (8 pairs)</option>
+            <option value="hard">Hard (12 pairs)</option>
+          </select>
+        </div>
+        <button id="startBtn" class="btn primary">Start Game</button>
+        <button id="restartBtn" class="btn">Restart</button>
+      </div>
+      
+      <div class="game-stats">
+        <div class="stat">
+          <span class="stat-label">Score:</span>
+          <span id="score" class="stat-value">0</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Matches:</span>
+          <span id="matches" class="stat-value">0</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Time:</span>
+          <span id="timer" class="stat-value">0:00</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Remaining:</span>
+          <span id="remaining" class="stat-value">0</span>
+        </div>
+      </div>
+
+      <div id="gameBoard" class="game-board" aria-label="Memory matching game board">
+        <!-- Tiles will be dynamically generated here -->
+      </div>
+      
+      <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    </section>
+
+    <section class="panel">
+      <h2>How to Play</h2>
+      <ul class="instructions">
+        <li>Choose your difficulty level and click "Start Game"</li>
+        <li>Drag tiles around the board to find matching pairs</li>
+        <li>When two matching tiles are close enough, they'll automatically pair up</li>
+        <li>Score points for each successful match</li>
+        <li>Complete all pairs to win the game</li>
+        <li>Try to finish as quickly as possible for a better score!</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>© 2025 OpenRouter Airways — "Remember the faces, catch the matches."</div>
+    <div class="links">
+      <a href="#" class="small">Game Rules</a>
+      <a href="#" class="small">High Scores</a>
+      <a href="#" class="small">About</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
